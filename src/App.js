@@ -6,11 +6,20 @@ import {
   Link
 } from "react-router-dom";
 import Home from './pages/Home';
+import signin from './pages/Signin';
+import Signin from './pages/Signin';
 
 function App() {
   return (
     <Router >
-      <Home></Home>
+      <Switch>
+        <Route path="/" exact>
+          <Home></Home>
+        </Route>
+        <Route>
+          <Signin></Signin>
+        </Route>
+      </Switch>
     </Router>
   );
 }
